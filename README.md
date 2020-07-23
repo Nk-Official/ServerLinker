@@ -2,7 +2,9 @@
 Networking part of App.
 
 
-##Steps to add librrary
+## Steps to add librrary
+
+https://medium.com/better-programming/create-swift-5-static-library-f1c7a1be3e45
 
 1. The first thing is that we need to add the compiled library’s files to the new project. To reach that, right-click on your project name in the project navigator and select Show in Finder.
 2. In the opened Finder’s window, create a new folder in the project’s root folder and name it lib(yourProject/lib).
