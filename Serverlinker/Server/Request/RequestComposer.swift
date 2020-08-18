@@ -16,7 +16,7 @@ class RequestComposer: RequestComposerProtocol{
     func request(request: Request)
         throws ->URLRequest{
         
-            let urlStr = request.url.urlString
+            let urlStr = request.url.baseurl + request.url.urlString
             let query = request.query
             let parameters = request.body
             let method = request.method
@@ -45,7 +45,7 @@ class RequestComposer: RequestComposerProtocol{
     //MARK: - getUrl
     private func getUrl(urlStr: String,queryItems: [Query]?)->URL?{
         
-        guard var urlComponent = URLComponents(string: "google.com") else{
+        guard var urlComponent = URLComponents(string: urlStr) else{
             return URL(string: urlStr)
         }
         var queryParam = [URLQueryItem]()
