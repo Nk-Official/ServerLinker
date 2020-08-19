@@ -60,7 +60,7 @@ public class Router: RouterProtocol{
     private func connectToServer(request: URLRequest, callback: @escaping (Data?,URLResponse?,Error?)->() ){
         session.dataTask(with: request) {  (data, response, error) in
             callback(data,response,error)
-        }
+        }.resume()
     }
     
     //MARK: - handle server data
