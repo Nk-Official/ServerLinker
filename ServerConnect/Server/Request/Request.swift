@@ -24,13 +24,12 @@ public struct Request{
         }
         return query
     }
-}
-
-extension Request{
-    init(url: API, method: HTTPMethod) {
+    public init(url: API, method: HTTPMethod, body: Any? = nil ,queryParam: [String:String]? = nil, header: [String:String]? = nil){
         self.url = url
         self.method = method
+        self.body = body
+        self.queryParam = queryParam
+        self.header = header
     }
 }
-
 

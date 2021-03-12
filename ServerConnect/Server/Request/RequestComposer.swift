@@ -16,7 +16,7 @@ class RequestComposer: RequestComposerProtocol{
     func request(request: Request)
         throws ->URLRequest{
         
-            let urlStr = request.url.baseurl + request.url.urlString
+            let urlStr = request.url.baseurl + request.url.endPoint
             let query = request.query
             let parameters = request.body
             let method = request.method

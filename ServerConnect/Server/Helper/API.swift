@@ -9,5 +9,5 @@
 import Foundation
 public protocol API {
     var baseurl: String{get}
-    var urlString: String{get}
+    var endPoint: String{get}
 }

@@ -7,14 +7,14 @@
 //
 
 import Foundation
-public class Router: RouterProtocol{
+open class Router: RouterProtocol{
     
     
     var requestComposer: RequestComposerProtocol = RequestComposer()
     var encryptor = JSONEncryptor()
     var session = URLSession(configuration: .default)
     
-    
+    public init(){}
     
     public func hitServer(reuest: Request, callback: @escaping (Result<Any,Error>)->() ) throws{
         do{
