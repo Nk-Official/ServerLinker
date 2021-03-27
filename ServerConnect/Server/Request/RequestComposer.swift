@@ -37,7 +37,8 @@ class RequestComposer: RequestComposerProtocol{
         var urlRequest = URLRequest(url: url)
         urlRequest.httpMethod = method.rawValue
         urlRequest.httpBody = body
-        urlRequest.allHTTPHeaderFields = header
+            
+        urlRequest.allHTTPHeaderFields = header+["Content-Type":"Application/json"]
         
         return urlRequest
     }
